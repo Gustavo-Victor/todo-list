@@ -1,0 +1,174 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    color: #333;
+    background-image: url('../img/pexels-vittorio-staffolani-1250048.jpg');
+    background-position: center;
+    background-size: cover;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* width: 100%;
+    height: 100vh; */
+}
+
+/*general styles*/
+/*all page buttons*/
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: #102f5e;
+    color: white;
+}
+
+button:hover > i {
+    color: white;
+}
+
+button i {
+    color: #102f5e;
+    font-weight: bold;
+    pointer-events: none;
+} 
+
+/*input and select fields*/
+input, select {
+    padding: 0.25rem 0.5rem;
+    outline: none;
+    /* width: 100%; */
+    border: 0.5px solid #bebebe;
+}
+
+/*hide class*/
+.hide {
+    display: none;
+}
+
+/*specific styles*/
+/*container*/
+.todo-container {
+    background-color:  #fdfdfd;
+    margin: 3rem auto 0;
+    padding: 1.5rem;
+    width: 60%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-sizing: 0px 10px 50px 3px rgba(0,0,0,0.8);
+}
+
+/*header*/
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/*todo form, edit form*/
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p, #edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+
+}
+
+/*toolbar / search and filter*/
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 1rem;
+    width: 100%;    
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+}
+
+#toolbar #search, #toolbar #filter {
+    flex: auto 1 1;
+}
+
+#toolbar #search {
+    flex-basis: 65%;
+    border-right: 1px solid #ccc;
+}
+
+#toolbar #search .form-control {
+    padding-right: 1rem;
+}
+
+#toolbar #search input {
+    flex: 1;
+}
+
+#toolbar #filter {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar #filter select {
+    flex: 1;
+}
+
+/*todo list*/
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button {
+    margin-left: 0.4rem;
+}
+
+.todo.done {
+    background-color: #395169;
+}
+
+.todo.done h3 {
+    color: white;
+    text-decoration: line-through;
+    font-style: italic;
+}
